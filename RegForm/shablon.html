@@ -1,0 +1,55 @@
+<div class="tabs">  //   формы сделаны как табы, при клике на button_author или button_register меняются стили и номера форм
+    <button class="button_author selected">АВТОРИЗАЦИЯ</button> //  selected - при загрузке кнопка Авторизация уже selected
+    <button class="button_register">РЕГИСТРАЦИЯ</button>
+    <form class="form active" id="form1" action="#">  //форма активная при загрузке id="form1"
+        <div class="form_icon">
+            <img src="img/freedom.png" alt="">
+        </div>
+        <div class="login">ЛОГИН</div>  // просто название для инпута, надо было label наверно, в данном случае текст ЛОГИН
+        <div class="divider1"></div> //верхняя синяя черточка при ошибке получает красный цвет
+        <div class="first">
+            <input id="login" name="login"  placeholder="Введите логин" type="text" maxlength="25"> //первый инпут id="login"
+        </div>
+
+        <div class="password">ПАРОЛЬ</div> //// просто название для инпута, надо было label наверно, в данном случае текст ПАРОЛЬ
+        <div class="nocorrect">ВВЕДИТЕ ДАННЫЕ</div>   // блок с ошибкой - visibility hidden, появляется при ошибке
+        <div class="divider2"></div>  //нижняя синяя черточка при ошибке получает красный цвет
+        <div class="second">
+            <input id="password" name="password"  placeholder="Введите пароль" type="password" maxlength="25">   //второй инпут id="password"
+        </div>
+        <div class="form__link">
+            <a href="#">Забыли&nbsp;данные?</a> //ссылка Забыли данные - никак пока не обрабатывается
+        </div>
+        <button class="button_account enter" type="submit">ВОЙТИ В АККАУНТ</button>  // кнопка нижняя submit
+    </form>
+
+
+    Форма2 id="form2"(или первая форма при регистрации)
+
+    ЛОГИН (введите ваш логин) - проверка что не пустая, а макс.кол.зн. 25 - инлайн прописано
+    ПОЧТА (введите вашу почту) - проверка с пом.RegEx
+
+    с случае ошибок - инпут с красным бордером, красные черточки и див Некорректные данные
+
+
+    Форма3 id="form3"(или первая форма при регистрации)
+
+    ПАРОЛЬ (введите ваш пароль) - проверка что не пустая, а макс.кол.зн. 25 - инлайн прописано
+    ПОДТВЕРЖДЕНИЕ ПАРОЛЯ (подтвердите ваш пароль) - проверку на соответствие введенному паролю не знаю как реализовать
+
+    с случае ошибок - инпут с красным бордером, красные черточки и див Некорректные данные
+
+    Вроде все.
+
+
+В js переменные:
+
+    var form = document.getElementsByTagName('form'); // форма (вообще)
+    var login = $('#login').val(); //  логин (уже зарегистрированный)
+    var password = $('#password').val(); //  пароль (уже зарегистрированный)
+    var enter_login = $('#enter_login').val(); // логин - при первой регистрации
+    var email = $('#email').val(); //емэйл - при первой регистрации
+    var enter_password = $('#enter_password').val(); // пароль - при первой регистрации
+    var confirm_password = $('#confirm_password').val(); // подтвержденный пароль - при первой регистрации
+    var regEx = /^([a-z0-9_-]+\.)*[a-z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*\.[a-z]{2,6}$/; // рег. выр. для проверки почты
+    var validEmail = regEx.test(email); //переменная что почта проверена

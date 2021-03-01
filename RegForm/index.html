@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RegForm</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="overlay">
+        <div class="modal">
+            <div class="title">
+                <div class="title__left">
+                    <img src="img/dots.png" alt="">
+                </div>
+                <div class="title__right">
+                    <img src="img/dots.png" alt="">
+                </div>
+                <div class="title__logo">
+                    <a href="#">LIBERTY ROLE PLAY</a>
+                </div>
+                
+            </div>
+
+            <div class="tabs">
+                <button class="button_author selected">АВТОРИЗАЦИЯ</button>
+                <button class="button_register">РЕГИСТРАЦИЯ</button>
+                <form class="form active" id="form1" action="#">
+                    <div class="form_icon">
+                        <img src="img/freedom.png" alt="">
+                    </div>
+                    <div class="login">ЛОГИН</div>
+                    <div class="divider1"></div>
+                    <div class="first">
+                        <input id="login" name="login"  placeholder="Введите логин" type="text" maxlength="25">
+                    </div>
+    
+                    <div class="password">ПАРОЛЬ</div>
+                    <div class="nocorrect">ВВЕДИТЕ ДАННЫЕ</div>
+                    <div class="divider2"></div>
+                    <div class="second">
+                        <input id="password" name="password"  placeholder="Введите пароль" type="password" maxlength="25">
+                    </div>
+                    <div class="form__link">
+                        <a href="#">Забыли&nbsp;данные?</a>
+                    </div>
+                    <button class="button_account enter" type="submit">ВОЙТИ В АККАУНТ</button>
+                </form>
+    
+                <form class="form" id="form2" action="#">
+                    <div class="form_icon">
+                        <img src="img/freedom.png" alt="">
+                    </div>
+                    <div class="login">ВАШ ЛОГИН</div>
+                    <div class="divider1"></div>
+                    <div class="first">
+                        <input id="enter_login" name="login"  placeholder="Введите логин" type="text" maxlength="25">
+                    </div>
+    
+                    <div class="password">ВАША ПОЧТА</div>
+                    <div class="divider2"></div>
+                    <div class="second">
+                        <input id="email" name="email" placeholder="Введите вашу почту" type="email" maxlength="25">
+                    </div>
+                    <div class="form__link">
+                        <a href="#">Забыли данные?</a>
+                    </div>
+                    <button class="button_account continue" type="submit">ПРОДОЛЖИТЬ</button>
+                </form>
+
+                <form class="form" id="form3" action="#">
+                    <div class="form_icon">
+                        <img src="img/freedom.png" alt="">
+                    </div>
+                    <div class="login">ВАШ ПАРОЛЬ</div>
+                    <div class="nocorrect">НЕКОРРЕКТНЫЕ ДАННЫЕ</div>
+                    <div class="divider1"></div>
+                    <div class="first">
+                        <input id="enter_password" name="password"  placeholder="Введите пароль" type="password" minlength="3" maxlength="25">
+                    </div>
+    
+                    <div class="password">ПОДТВЕРЖДЕНИЕ ПАРОЛЯ</div>
+                    <div class="divider2"></div>
+                    <div class="second">
+                        <input id="confirm_password" name="confirm_password" name="confirm_password"  placeholder="Подтверждение пароля" type="password" minlength="3" maxlength="25">
+                    </div>
+                    <div class="form__link">
+                        <a href="#">Забыли данные?</a>
+                    </div>
+                    <button class="button_account finish" type="submit">ЗАКОНЧИТЬ</button>
+                </form>
+    
+            </div>
+
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+        
+        <script src="main.js"></script>
+        <script src="validator.js" ></script>
+        <!-- <script src="validator2.js" ></script> -->
+    </div>
+
+ 
+    
+</body>
+</html>
